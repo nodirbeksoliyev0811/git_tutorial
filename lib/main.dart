@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
         useMaterial3: true
       ),
       home: Column(
-        children: [],
+        children: [
+          Text('Muhammad')
+        ],
       ),
     );
   }
