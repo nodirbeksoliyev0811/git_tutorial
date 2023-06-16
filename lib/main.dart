@@ -16,7 +16,11 @@ class MyApp extends StatelessWidget {
       ),
       home: Column(
         children: [
+
           Text('Commit qiliw ucn'),
+
+          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),)
+
           Text('Muhammad')
       home: const Column(
         children: [
