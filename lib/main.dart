@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true
       ),
       home: const Column(
+        children: [
+          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),)
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
             fontSize: 35,
             color: Colors.tealAccent
           ),)
+
         ],
       ),
     );
