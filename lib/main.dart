@@ -14,6 +14,9 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true
       ),
+      home: Column(
+        children: [
+          Text('Muhammad')
       home: const Column(
         children: [
           Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),)
@@ -24,7 +27,6 @@ class MyApp extends StatelessWidget {
             fontSize: 35,
             color: Colors.tealAccent
           ),)
-
         ],
       ),
     );
