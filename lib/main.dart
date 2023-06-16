@@ -15,7 +15,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true
       ),
-      home: const WelcomeScreen(),
+      home: Column(
+        children: [
+          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),)
+        ],
+      ),
     );
   }
 }
