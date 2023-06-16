@@ -16,18 +16,10 @@ class MyApp extends StatelessWidget {
       ),
       home: Column(
         children: [
-
           Text('Commit qiliw ucn'),
-
-          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),)
-
-          Text('Muhammad')
-      home: const Column(
-        children: [
-          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),)
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
+          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),),
+          Text('Muhammad'),
+          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
           Text("Dilshodbek", style: TextStyle(
             fontSize: 35,
             color: Colors.tealAccent
