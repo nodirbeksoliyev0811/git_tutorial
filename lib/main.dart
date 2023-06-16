@@ -16,11 +16,12 @@ class MyApp extends StatelessWidget {
       ),
       home: const Column(
         children: [
-          Text("Githabga kirish",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),),
+          SizedBox(height: 30),
+          Text("Github ga kirish",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
+          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 24,fontWeight: FontWeight.w900),),
+          Text("Jamshid Jo'rayev",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
           Text('Muhammad',style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Dilshodbek", style: TextStyle(fontSize: 35,color: Colors.tealAccent),),
+          Text("Dilshodbek",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
           Text("Dilxiroj",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
         ],
       ),
