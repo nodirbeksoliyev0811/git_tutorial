@@ -16,8 +16,8 @@ class MyApp extends StatelessWidget {
       ),
       home: Column(
         children: [
-
           Text('Commit qiliw ucn'),
+          Text('Muhammad')
       home: const Column(
         children: [
           Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),)
@@ -28,7 +28,6 @@ class MyApp extends StatelessWidget {
             fontSize: 35,
             color: Colors.tealAccent
           ),)
-
         ],
       ),
     );
