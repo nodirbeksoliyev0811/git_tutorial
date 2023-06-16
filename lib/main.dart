@@ -16,7 +16,14 @@ class MyApp extends StatelessWidget {
         useMaterial3: true
       ),
       home: Column(
-        children: [],
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("Dilshodbek", style: TextStyle(
+            fontSize: 35,
+            color: Colors.tealAccent
+          ),)
+        ],
       ),
     );
   }
