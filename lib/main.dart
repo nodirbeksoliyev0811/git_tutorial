@@ -1,3 +1,4 @@
+import 'package:default_project/ui/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,16 +15,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true
       ),
-      home: const Column(
-        children: [
-          Text("Githubga kirish",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Nodirchik",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Jamshid Jo'rayev",style: TextStyle(fontWeight: FontWeight.w700,fontSize: 24,color: Colors.black),),
-          Text('Muhammad',style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-          Text("Dilshodbek", style: TextStyle(fontSize: 35,color: Colors.tealAccent),),
-          Text("Dilxiroj",style: TextStyle(color: Colors.red,fontSize: 23,fontWeight: FontWeight.w900),),
-        ],
-      ),
+      home: const HomeScreen()
     );
   }
 }
