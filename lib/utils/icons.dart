@@ -18,4 +18,7 @@ class AppImages{
   static const String search = "assets/svg/search.svg";
   static const String setting = "assets/svg/setting.svg";
   static const String smile = "assets/svg/setting.svg";
+  static const String red_heart = "assets/svg/red_heart.svg";
+  static const String white_heart = "assets/svg/white_heart.svg";
+  static const String plus = "assets/svg/plus.svg";
 }
