@@ -1,4 +1,4 @@
-class AppImages{
+class AppImages {
   //png
   static const String mango = "assets/images/mango.png";
   static const String grape = "assets/images/grape.png";

@@ -1,1 +1,1 @@
-class PlaceHolderModel{}
+class PlaceHolderModel {}
