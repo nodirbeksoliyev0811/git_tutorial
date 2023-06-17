@@ -118,8 +118,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                                 crossAxisAlignment:
                                                     CrossAxisAlignment.start,
                                                 children: [
-                                                  Text(
-                                                    'Sort By',
+                                                  Text('Sort By',
                                                     style: TextStyle(
                                                         fontWeight:
                                                             FontWeight.w700,
@@ -182,8 +181,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                                       MyButton(
                                                           title: 'Regular', index: 0, onTap: () {  },),
                                                       MyButton(
-                                                          title:
-                                                              'Free Shipping', index: 1, onTap: () {  },),
+                                                          title: 'Free Shipping', index: 1, onTap: () {  },),
                                                     ],
                                                   ),
                                                   const SizedBox(
