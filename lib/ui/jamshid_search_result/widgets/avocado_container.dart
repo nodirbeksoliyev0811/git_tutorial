@@ -4,9 +4,9 @@ import 'package:flutter_svg/svg.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/icons.dart';
 
-class StrawberryContainer extends StatefulWidget {
+class AvocadoContainer extends StatefulWidget {
 
-  const StrawberryContainer({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.heart});
+  const AvocadoContainer({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.heart});
 
   final String img;
   final String text;
@@ -18,10 +18,10 @@ class StrawberryContainer extends StatefulWidget {
 
 
   @override
-  State<StrawberryContainer> createState() => _StrawberryContainerState();
+  State<AvocadoContainer> createState() => _AvocadoContainerState();
 }
 
-class _StrawberryContainerState extends State<StrawberryContainer> {
+class _AvocadoContainerState extends State<AvocadoContainer> {
 
   bool isHeart=false;
   bool isOne=false;
@@ -81,7 +81,7 @@ class _StrawberryContainerState extends State<StrawberryContainer> {
                 ),
               ],
             ),
-            const SizedBox(width: 66,),
+            const SizedBox(width: 69,),
             Column(
               children: [
                 const SizedBox(height: 20,),

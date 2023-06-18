@@ -7,6 +7,10 @@ class AppImages{
   static const String lemon = "assets/images/lemon.png";
   static const String bread = "assets/images/bread.png";
   static const String meat = "assets/images/meat.png";
+  static const String orange = "assets/images/orange.png";
+  static const String redPepper = "assets/images/redPepper.png";
+  static const String tomato = "assets/images/tomato.png";
+  static const String chicken = "assets/images/chicken.png";
 
   //svg
   static const String arrowBack = "assets/svg/arrow_back.svg";
@@ -18,7 +22,7 @@ class AppImages{
   static const String search = "assets/svg/search.svg";
   static const String setting = "assets/svg/setting.svg";
   static const String smile = "assets/svg/setting.svg";
-  static const String red_heart = "assets/svg/red_heart.svg";
-  static const String white_heart = "assets/svg/white_heart.svg";
+  static const String redHeart = "assets/svg/red_heart.svg";
+  static const String whiteHeart = "assets/svg/white_heart.svg";
   static const String plus = "assets/svg/plus.svg";
 }

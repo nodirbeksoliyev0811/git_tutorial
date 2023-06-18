@@ -41,3 +41,13 @@ fonts:
       - asset: assets/fonts/Sora-Bold.ttf
       - asset: assets/fonts/Sora-ExtraBold.ttf
         style: italic
+
+  - family: Raleway
+    fonts:
+      - asset: assets/fonts/Raleway-Italic-VariableFont_wght.ttf
+      - asset: assets/fonts/Raleway-VariableFont_wght.ttf
+
+  - family: Montserrat
+    fonts:
+      - asset: assets/fonts/Montserrat-Italic-VariableFont_wght.ttf
+      - asset: assets/fonts/Montserrat-VariableFont_wght.ttf

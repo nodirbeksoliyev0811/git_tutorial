@@ -4,26 +4,29 @@ import 'package:flutter_svg/svg.dart';
 import '../../../utils/colors.dart';
 import '../../../utils/icons.dart';
 
-class WhiteHeart extends StatefulWidget {
+class GrapeContainer extends StatefulWidget {
 
-  const WhiteHeart({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.whiteHeart});
+  const GrapeContainer({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.heart});
 
   final String img;
   final String text;
   final String richText;
   final String richTitle;
   final String richSubtitle;
-  // final String redHeart;
-  final String whiteHeart;
+  final String heart;
+  // final String whiteHeart;
 
 
   @override
-  State<WhiteHeart> createState() => _WhiteHeartState();
+  State<GrapeContainer> createState() => _GrapeContainerState();
 }
 
-class _WhiteHeartState extends State<WhiteHeart> {
+class _GrapeContainerState extends State<GrapeContainer> {
 
-
+  bool isHeart=false;
+  bool isOne=false;
+  int count=2;
+  bool isSelected=false;
 
   @override
   Widget build(BuildContext context) {
@@ -34,79 +37,92 @@ class _WhiteHeartState extends State<WhiteHeart> {
           color: AppColors.C_F1F4F3,
         ),
         child: Row(
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(widget.img),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 32,),
+                const SizedBox(height: 32,),
                 Text(
                   widget.text,
-                  style: TextStyle(
+                  style: const TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 15,
+                      fontFamily: "Raleway",
                       color: AppColors.C_194B38),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 RichText(
                     text: TextSpan(
                         text: widget.richText,
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.w600,
+                            fontFamily: "Montserrat",
                             color: AppColors.C_4CBB5E),
                         children: <TextSpan>[
                           TextSpan(
                             text: widget.richTitle,
-                            style: TextStyle(
+                            style: const TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 20,
+                                fontFamily: "Montserrat",
                                 color: AppColors.C_4CBB5E),
                           ),
-                          TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: AppColors.C_9C9C9C))
+                          TextSpan(text: widget.richSubtitle,style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: AppColors.C_9C9C9C))
                         ]
                     )
                 ),
               ],
             ),
-            SizedBox(width: 69,),
+            const SizedBox(width: 69,),
             Column(
               children: [
-                SizedBox(height: 20,),
-                Container(
-                  height: 25,
-                  width: 25,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: AppColors.C_F1F4F3,
-                    border: Border.all(color: AppColors.C_EC534A,width: 1),
-                  ),
-                  child: Center(
+                const SizedBox(height: 20,),
+                Ink(
+                  child: InkWell(
+                    onTap: (){
+                      setState(() {
+                        isSelected=!isSelected;
+                      });
+                    },
                     child: Container(
-                      height: 20,
-                      width: 20,
+                      height: 25,
+                      width: 25,
                       decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: AppColors.white
+                        shape: BoxShape.circle,
+                        color: AppColors.C_F1F4F3,
+                        border: Border.all(color: AppColors.C_EC534A,width: 1),
                       ),
-                      child:
-                      Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: SvgPicture.asset(widget.whiteHeart),
+                      child: Center(
+                        child: Container(
+                          height: 20,
+                          width: 20,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: isSelected?AppColors.C_EC534A:AppColors.white
+                          ),
+                          child:
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: isSelected?SvgPicture.asset(widget.heart):SvgPicture.asset(AppImages.redHeart),
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 34,),
+                const SizedBox(height: 34,),
                 Container(
                   height: 41,
                   width: 61.7,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(15),bottomRight: Radius.circular(23)),
                     gradient: LinearGradient(
                       begin: Alignment.topRight,
