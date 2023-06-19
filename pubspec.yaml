@@ -40,4 +40,12 @@ fonts:
       - asset: assets/fonts/Sora-SemiBold.ttf
       - asset: assets/fonts/Sora-Bold.ttf
       - asset: assets/fonts/Sora-ExtraBold.ttf
+  - family: Montserrat
+    fonts:
+      - asset: assets/fonts/Montserrat-Regular.ttf
+      - asset: assets/fonts/Montserrat-Light.ttf
+      - asset: assets/fonts/Montserrat-Medium.ttf
+      - asset: assets/fonts/Montserrat-SemiBold.ttf
+      - asset: assets/fonts/Montserrat-Bold.ttf
+      - asset: assets/fonts/Montserrat-ExtraBold.ttf
         style: italic
