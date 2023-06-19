@@ -20,7 +20,7 @@ class GetButton extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
             child: Text(text, style: const TextStyle(
-                fontFamily: "Montserrat",
+                fontFamily: "Montserrat-Bold.ttf",
               fontSize: 10,
               fontWeight: FontWeight.w500,
               color: AppColors.C_777777

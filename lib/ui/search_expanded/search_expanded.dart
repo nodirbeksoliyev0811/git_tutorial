@@ -39,7 +39,7 @@ class _SearchExpandedScreenState extends State<SearchExpandedScreen> {
                 decoration: BoxDecoration(
                   color: AppColors.white,
                   borderRadius: BorderRadius.circular(100.r),
-                  border: Border.all(color: AppColors.C_777777.withOpacity(0.8), width: 1.w)     ,
+                  border: Border.all(color: AppColors.C_777777.withOpacity(0.8), width: 1)     ,
                 ),
                 child: Center(
                   child: SizedBox(height: 18.w, width: 18.w, child: SvgPicture.asset(AppImages.arrowBack),),
@@ -64,7 +64,7 @@ class _SearchExpandedScreenState extends State<SearchExpandedScreen> {
                   alignLabelWithHint: true,
                   hintText: "Search fresh groceries",
                   hintStyle: TextStyle(
-                    fontFamily: "Raleway",
+                    fontFamily: "Raleway-Bold.ttf",
                     fontWeight: FontWeight.w400,
                     fontSize: 14.sp,
                     color: AppColors.C_194B38.withOpacity(0.4),
