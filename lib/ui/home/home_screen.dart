@@ -4,6 +4,7 @@ import 'package:default_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../mr_nodir/item_not_found.dart';
+import '../muhammad/filter_screen.dart';
 import '../search_expanded/search_expanded.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -50,7 +51,14 @@ class HomeScreen extends StatelessWidget {
             );
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "muhammad", onTap: (){
-
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const FilterScreen();
+                },
+              ),
+            );
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "akromjon", onTap: (){
 
