@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
@@ -31,51 +32,50 @@ class _FruitContainerState extends State<FruitContainer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 120,
+        height: 120.h,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(23),
+          borderRadius: BorderRadius.circular(23.r),
           color: AppColors.C_F1F4F3,
         ),
         child: Row(
-          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(widget.img),
-            const SizedBox(
-              width: 10,
+            SizedBox(
+              width: 10.w,
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const SizedBox(height: 32,),
+                SizedBox(height: 32.h,),
                 Text(
                   widget.text,
-                  style: const TextStyle(
+                  style: TextStyle(
                       fontWeight: FontWeight.w700,
-                      fontSize: 15,
+                      fontSize: 15.sp,
                       fontFamily: "Raleway",
                       color: AppColors.C_194B38),
                 ),
-                const SizedBox(
-                  height: 10,
+                SizedBox(
+                  height: 10.h,
                 ),
                 RichText(
                     text: TextSpan(
                         text: widget.richText,
-                        style: const TextStyle(
-                            fontSize: 24,
+                        style: TextStyle(
+                            fontSize: 24.sp,
                             fontWeight: FontWeight.w600,
                             fontFamily: "Montserrat",
                             color: AppColors.C_4CBB5E),
                         children: <TextSpan>[
                           TextSpan(
                             text: widget.richTitle,
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 20,
+                                fontSize: 20.sp,
                                 fontFamily: "Montserrat",
                                 color: AppColors.C_4CBB5E),
                           ),
-                          TextSpan(text: widget.richSubtitle,style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w600,fontFamily:"Raleway",color: AppColors.C_9C9C9C))
+                          TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 14.sp,fontWeight: FontWeight.w600,fontFamily:"Raleway",color: AppColors.C_9C9C9C))
                         ]
                     )
                 ),
@@ -84,7 +84,7 @@ class _FruitContainerState extends State<FruitContainer> {
             const Spacer(),
             Column(
               children: [
-                const SizedBox(height: 20,),
+                SizedBox(height: 20.h,),
                 Ink(
                   child: InkWell(
                     onTap: (){
@@ -93,24 +93,24 @@ class _FruitContainerState extends State<FruitContainer> {
                       });
                     },
                     child: Container(
-                      height: 25,
-                      width: 25,
+                      height: 25.h,
+                      width: 25.w,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: AppColors.C_F1F4F3,
-                        border: Border.all(color: AppColors.C_EC534A.withOpacity(0.2),width: 1),
+                        border: Border.all(color: AppColors.C_EC534A.withOpacity(0.2),width: 1.w),
                       ),
                       child: Center(
                         child: Container(
-                          height: 20,
-                          width: 20,
+                          height: 20.h,
+                          width: 20.w,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: isSelected?AppColors.C_EC534A:AppColors.white
                           ),
                           child:
                           Padding(
-                            padding: const EdgeInsets.all(5.0),
+                            padding: EdgeInsets.all(5.0.sp),
                             child: isSelected?SvgPicture.asset(widget.heart):SvgPicture.asset(AppImages.redHeart),
                           ),
                         ),
@@ -118,15 +118,15 @@ class _FruitContainerState extends State<FruitContainer> {
                     ),
                   ),
                 ),
-                const SizedBox(height: 34,),
+                SizedBox(height: 34.h,),
                 ZoomTapAnimation(
                   onTap: (){},
                   child: Container(
-                    height: 41,
-                    width: 61.7,
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(topLeft: Radius.circular(15),bottomRight: Radius.circular(23)),
-                      gradient: LinearGradient(
+                    height: 41.h,
+                    width: 61.7.w,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(15.r),bottomRight: Radius.circular(23.r)),
+                      gradient: const LinearGradient(
                         begin: Alignment.topRight,
                         end: Alignment.bottomLeft,
                         colors: [

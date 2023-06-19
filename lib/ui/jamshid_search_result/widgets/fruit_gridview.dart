@@ -45,7 +45,7 @@ class _FruitGridViewState extends State<FruitGridView> {
             children: [
               SizedBox(child: Image.asset(widget.img)),
               Positioned(
-                top: 17.h,left: 107.w,
+                top: 17.h, left: 110.w,
                 child: Ink(
                   child: InkWell(
                     onTap: (){
@@ -82,8 +82,7 @@ class _FruitGridViewState extends State<FruitGridView> {
               ),
             ],
           ),
-          Spacer(),
-          // SizedBox(height: 34,),
+          const Spacer(),
           Padding(
             padding: EdgeInsets.only(left: 17.w,),
             child: Text(widget.text,style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14.sp,fontFamily: "Raleway",color: AppColors.C_194B38),),
