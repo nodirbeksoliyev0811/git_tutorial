@@ -28,7 +28,14 @@ class HomeScreen extends StatelessWidget {
             }));
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "Screen2", onTap: (){
-
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return NotFound(),
+                    },
+                  ),
+                );
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "Screen2", onTap: (){
 
