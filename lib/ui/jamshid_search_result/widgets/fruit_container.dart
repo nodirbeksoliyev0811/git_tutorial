@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 import '../../../utils/colors.dart';
 import '../../../utils/icons.dart';
 
-class GrapeContainer extends StatefulWidget {
+class FruitContainer extends StatefulWidget {
 
-  const GrapeContainer({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.heart});
+  const FruitContainer({super.key, required this.img, required this.text, required this.richText, required this.richTitle, required this.richSubtitle, required this.heart});
 
   final String img;
   final String text;
@@ -14,14 +15,13 @@ class GrapeContainer extends StatefulWidget {
   final String richTitle;
   final String richSubtitle;
   final String heart;
-  // final String whiteHeart;
 
 
   @override
-  State<GrapeContainer> createState() => _GrapeContainerState();
+  State<FruitContainer> createState() => _FruitContainerState();
 }
 
-class _GrapeContainerState extends State<GrapeContainer> {
+class _FruitContainerState extends State<FruitContainer> {
 
   bool isHeart=false;
   bool isOne=false;
@@ -75,13 +75,13 @@ class _GrapeContainerState extends State<GrapeContainer> {
                                 fontFamily: "Montserrat",
                                 color: AppColors.C_4CBB5E),
                           ),
-                          TextSpan(text: widget.richSubtitle,style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w600,color: AppColors.C_9C9C9C))
+                          TextSpan(text: widget.richSubtitle,style: const TextStyle(fontSize: 14,fontWeight: FontWeight.w600,fontFamily:"Raleway",color: AppColors.C_9C9C9C))
                         ]
                     )
                 ),
               ],
             ),
-            const SizedBox(width: 69,),
+            const Spacer(),
             Column(
               children: [
                 const SizedBox(height: 20,),
@@ -98,7 +98,7 @@ class _GrapeContainerState extends State<GrapeContainer> {
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
                         color: AppColors.C_F1F4F3,
-                        border: Border.all(color: AppColors.C_EC534A,width: 1),
+                        border: Border.all(color: AppColors.C_EC534A.withOpacity(0.2),width: 1),
                       ),
                       child: Center(
                         child: Container(
@@ -119,23 +119,26 @@ class _GrapeContainerState extends State<GrapeContainer> {
                   ),
                 ),
                 const SizedBox(height: 34,),
-                Container(
-                  height: 41,
-                  width: 61.7,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(topLeft: Radius.circular(15),bottomRight: Radius.circular(23)),
-                    gradient: LinearGradient(
-                      begin: Alignment.topRight,
-                      end: Alignment.bottomLeft,
-                      colors: [
-                        AppColors.C_32CB4B,
-                        AppColors.C_26AD71,
-                      ],
+                ZoomTapAnimation(
+                  onTap: (){},
+                  child: Container(
+                    height: 41,
+                    width: 61.7,
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(15),bottomRight: Radius.circular(23)),
+                      gradient: LinearGradient(
+                        begin: Alignment.topRight,
+                        end: Alignment.bottomLeft,
+                        colors: [
+                          AppColors.C_32CB4B,
+                          AppColors.C_26AD71,
+                        ],
+                      ),
                     ),
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(10.10),
-                    child: SvgPicture.asset(AppImages.plus),
+                    child: Padding(
+                      padding: const EdgeInsets.all(10.10),
+                      child: SvgPicture.asset(AppImages.plus),
+                    ),
                   ),
                 )
               ],

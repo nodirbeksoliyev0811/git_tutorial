@@ -1,17 +1,17 @@
-import 'package:default_project/ui/jamshid_search_result/widgets/fruit_container.dart';
+import 'package:default_project/ui/jamshid_search_result/widgets/fruit_gridview.dart';
 import 'package:default_project/utils/colors.dart';
 import 'package:default_project/utils/icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class SearchResultScreen extends StatefulWidget {
-  const SearchResultScreen({super.key});
+class GridViewScreen extends StatefulWidget {
+  const GridViewScreen({super.key});
 
   @override
-  State<SearchResultScreen> createState() => _SearchResultScreenState();
+  State<GridViewScreen> createState() => _GridViewScreenState();
 }
 
-class _SearchResultScreenState extends State<SearchResultScreen> {
+class _GridViewScreenState extends State<GridViewScreen> {
   bool isColor = false;
   bool isOne = false;
   int count = 2;
@@ -47,13 +47,13 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                 ),
                 title: const Center(
                     child: Text(
-                  "Search Groceries",
-                  style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
-                      fontFamily: "Montserrat",
-                      color: AppColors.C_4B4B4B),
-                )),
+                      "Search Groceries",
+                      style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: "Montserrat",
+                          color: AppColors.C_4B4B4B),
+                    )),
                 trailing: SvgPicture.asset(AppImages.basket),
               ),
               const SizedBox(
@@ -106,7 +106,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                       ),
                     ),
                   ),
-                    const SizedBox(
+                  const SizedBox(
                     width: 22.7,
                   ),
                   Container(
@@ -140,29 +140,21 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
               const SizedBox(
                 height: 25,
               ),
-              const Expanded(child: SingleChildScrollView(
-                child:
-                  Column(
-                    children: [
-                      FruitContainer(img: AppImages.mango, text: "Mango", richText: "\$ 1.", richTitle: "8", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.grape, text: "Grape", richText: "\$ 2.", richTitle: "1", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.strawberry, text: "Strawberry", richText: "\$ 2.", richTitle: "5", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.avocado, text: "Avocado", richText: "\$ 1.", richTitle: "9", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.orange, text: "Orange", richText: "\$ 1.", richTitle: "2", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.tomato, text: "Tomato", richText: "\$ 1.", richTitle: "3", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.redPepper, text: "Red Bell Pepper", richText: "\$ 2.", richTitle: "2", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.avocado, text: "Avocado", richText: "\$ 1.", richTitle: "9", richSubtitle: "/kg", heart: AppImages.whiteHeart),
-                      SizedBox(height: 17,),
-                      FruitContainer(img: AppImages.redPepper, text: "Red Bell Pepper", richText: "\$ 2.", richTitle: "2", richSubtitle: "/kg", heart: AppImages.whiteHeart)
-                    ],
-                  )
+              Expanded(child: GridView(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,childAspectRatio: 149/245,crossAxisSpacing: 17,mainAxisSpacing: 17),
+                  children:
+                  [
+                    const FruitGridView(img: AppImages.mango, text: "Mango", richText: "\$ 1.", richTitle: "8", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.grape, text: "Grape", richText: "\$ 2.", richTitle: "1", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.strawberry, text: "Strawberry", richText: "\$ 2.", richTitle: "5", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.avocado, text: "Avocado", richText: "\$ 1.", richTitle: "9", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.orange, text: "Orange", richText: "\$ 1.", richTitle: "2", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.redPepper, text: "Red Bell Pepper", richText: "\$ 2.", richTitle: "2", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.tomato, text: "Tomato", richText: "\$ 1.", richTitle: "3", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.mango, text: "Mango", richText: "\$ 1.", richTitle: "8", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.grape, text: "Grape", richText: "\$ 2.", richTitle: "1", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                    const FruitGridView(img: AppImages.strawberry, text: "Strawberry", richText: "\$ 2.", richTitle: "1", richSubtitle: "/kg", heart: AppImages.whiteHeart),
+                  ]
               ),
               )
             ],

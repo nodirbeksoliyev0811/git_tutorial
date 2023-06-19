@@ -11,6 +11,7 @@ class AppImages{
   static const String redPepper = "assets/images/redPepper.png";
   static const String tomato = "assets/images/tomato.png";
   static const String chicken = "assets/images/chicken.png";
+  static const String mango2 = "assets/images/mango2.png";
 
   //svg
   static const String arrowBack = "assets/svg/arrow_back.svg";
