@@ -128,7 +128,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                                         Wrap(
                                                           children: [
                                                             ...List.generate(
-                                                                ButtonText.length,
+                                                                buttonText.length,
                                                                     (index) => Padding(
                                                                   padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 7),
                                                                   child: Ink(
@@ -144,14 +144,12 @@ class _FilterScreenState extends State<FilterScreen> {
                                                                       onTap: (){
                                                                         setState(() {
                                                                           i=index;
-                                                                          print(i);
-                                                                          print(index);
                                                                         });
                                                                       },
                                                                       child: Padding(
                                                                         padding: const EdgeInsets.only(left: 20,right: 20,top: 8),
                                                                         child: Text(
-                                                                          ButtonText[index],
+                                                                          buttonText[index],
                                                                           style: TextStyle(
                                                                               color: i==index? AppColors.mediumGreen:Colors.grey, fontSize: 10, fontWeight: FontWeight.w500),
                                                                         ),
@@ -322,7 +320,7 @@ class _FilterScreenState extends State<FilterScreen> {
   }
 }
 
-List<String> ButtonText = [
+List<String> buttonText = [
   'Popular',
   'Newest',
   'Lowest Price',
