@@ -83,14 +83,15 @@ class _FilterScreenState extends State<FilterScreen> {
                     ),
                     SizedBox(width: width * (18 / 375)),
                     SizedBox(
-                      child: Container(
+                      child: Ink(
                         width: width * (50 / 375),
                         height: height * (50 / 812),
                         decoration: BoxDecoration(
                             color: AppColors.darkGreen.withOpacity(0.06),
                             borderRadius: BorderRadius.circular(18)),
-                        child: IconButton(
-                          onPressed: () => showModalBottomSheet(
+                        child: InkWell(
+                          borderRadius: BorderRadius.circular(18),
+                          onTap: () => showModalBottomSheet(
                               showDragHandle: true,
                               barrierColor:
                                   AppColors.darkGreen.withOpacity(0.5),
@@ -305,7 +306,10 @@ class _FilterScreenState extends State<FilterScreen> {
                                     });
                                   }
                                 ),
-                                icon: SvgPicture.asset(AppImages.setting),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: SvgPicture.asset(AppImages.setting),
+                                ),
                               ),
                         ),
                       ),
