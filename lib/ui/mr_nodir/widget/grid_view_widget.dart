@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../utils/colors.dart';
-import '../../../utils/icons.dart';
+import '../../../../utils/colors.dart';
+import '../../../../utils/icons.dart';
 
 class FruitGridView extends StatefulWidget {
   const FruitGridView(
@@ -34,10 +35,10 @@ class _FruitGridViewState extends State<FruitGridView> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 245,
-      width: 149,
+      height: 245.h,
+      width: 149.w,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(23), color: AppColors.cF1F4F3),
+          borderRadius: BorderRadius.circular(23.r), color: AppColors.C_F1F4F3),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -45,8 +46,8 @@ class _FruitGridViewState extends State<FruitGridView> {
             children: [
               SizedBox(child: Image.asset(widget.img)),
               Positioned(
-                top: 17,
-                left: 107,
+                top: 17.h,
+                left: 107.w,
                 child: Ink(
                   child: InkWell(
                     onTap: () {
@@ -55,26 +56,26 @@ class _FruitGridViewState extends State<FruitGridView> {
                       });
                     },
                     child: Container(
-                      height: 25,
-                      width: 25,
+                      height: 25.h,
+                      width: 25.w,
                       decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: AppColors.cF1F4F3,
+                        color: AppColors.C_F1F4F3,
                         border: Border.all(
-                            color: AppColors.cEC534A.withOpacity(0.2),
-                            width: 1),
+                            color: AppColors.C_EC534A.withOpacity(0.2),
+                            width: 1.w),
                       ),
                       child: Center(
                         child: Container(
-                          height: 20,
-                          width: 20,
+                          height: 20.h,
+                          width: 20.w,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
                               color: isSelected
-                                  ? AppColors.cEC534A
+                                  ? AppColors.C_EC534A
                                   : AppColors.white),
                           child: Padding(
-                            padding: EdgeInsets.all(5.0),
+                            padding: EdgeInsets.all(5.0.sp),
                             child: isSelected
                                 ? SvgPicture.asset(widget.heart)
                                 : SvgPicture.asset(AppImages.redHeart),
@@ -87,17 +88,16 @@ class _FruitGridViewState extends State<FruitGridView> {
               ),
             ],
           ),
-          Spacer(),
-          // SizedBox(height: 34,),
+          const Spacer(),
           Padding(
-            padding: EdgeInsets.only(left: 17),
+            padding: EdgeInsets.only(left: 17.sp),
             child: Text(
               widget.text,
               style: TextStyle(
                   fontWeight: FontWeight.w700,
-                  fontSize: 14,
+                  fontSize: 14.sp,
                   fontFamily: "Raleway",
-                  color: AppColors.c194B38),
+                  color: AppColors.C_194B38),
             ),
           ),
           Row(
@@ -105,70 +105,70 @@ class _FruitGridViewState extends State<FruitGridView> {
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  left: 17,
+                  left: 17.w,
                 ),
                 child: Column(
                   children: [
                     SizedBox(
-                      height: 8,
+                      height: 8.h,
                     ),
                     RichText(
                         text: TextSpan(
                             text: widget.richText,
                             style: TextStyle(
-                                fontSize: 14,
+                                fontSize: 14.sp,
                                 fontWeight: FontWeight.w600,
                                 fontFamily: "Montserrat",
-                                color: AppColors.c4CBB5E),
+                                color: AppColors.C_4CBB5E),
                             children: <TextSpan>[
                           TextSpan(
                             text: widget.richTitle,
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
-                                fontSize: 12,
+                                fontSize: 12.sp,
                                 fontFamily: "Montserrat",
-                                color: AppColors.c4CBB5E),
+                                color: AppColors.C_4CBB5E),
                           ),
                           TextSpan(
                               text: widget.richSubtitle,
                               style: TextStyle(
-                                  fontSize: 10,
+                                  fontSize: 10.sp,
                                   fontWeight: FontWeight.w500,
                                   fontFamily: "Raleway",
-                                  color: AppColors.c9C9C9C))
+                                  color: AppColors.C_9C9C9C))
                         ])),
                   ],
                 ),
               ),
               const Spacer(),
               TextButton(
-                style: TextButton.styleFrom(padding: EdgeInsets.all(1)),
+                style: TextButton.styleFrom(padding: EdgeInsets.all(1.sp)),
                 onPressed: () {},
                 child: Container(
-                  height: 41,
-                  width: 53,
+                  height: 41.h,
+                  width: 53.w,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(15),
-                        bottomRight: Radius.circular(23)),
-                    gradient: LinearGradient(
+                        topLeft: Radius.circular(15.r),
+                        bottomRight: Radius.circular(23.r)),
+                    gradient: const LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       colors: [
-                        AppColors.c32CB4B,
-                        AppColors.c26AD71,
+                        AppColors.C_32CB4B,
+                        AppColors.C_26AD71,
                       ],
                     ),
                   ),
                   child: Padding(
-                    padding: EdgeInsets.all(1),
+                    padding: EdgeInsets.all(1.sp),
                     child: TextButton(
                       onPressed: () {},
                       style: TextButton.styleFrom(
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(14),
-                        bottomRight: Radius.circular(22),
+                        topLeft: Radius.circular(14.r),
+                        bottomRight: Radius.circular(22.r),
                       ))),
                       child: SvgPicture.asset(AppImages.plus),
                     ),
