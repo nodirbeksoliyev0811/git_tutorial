@@ -1,4 +1,5 @@
 import 'package:default_project/ui/home/widgets/new_screen_button.dart';
+import 'package:default_project/ui/jamshid_search_result/gridview_screen.dart';
 import 'package:default_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -39,7 +40,14 @@ class HomeScreen extends StatelessWidget {
                 );
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "jamshid", onTap: (){
-
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return const GridViewScreen();
+                },
+              ),
+            );
           }, color: AppColors.C_194B38),
           NewScreenButton(title: "muhammad", onTap: (){
 

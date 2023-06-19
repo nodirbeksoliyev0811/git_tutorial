@@ -17,6 +17,7 @@ dependencies:
   zoom_tap_animation: ^1.1.0
   flutter_screenutil: ^5.8.4
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -72,4 +73,3 @@ flutter:
         - asset: assets/fonts/Raleway-SemiBoldItalic.ttf
         - asset: assets/fonts/Raleway-Thin.ttf
         - asset: assets/fonts/Raleway-ThinItalic.ttf
-
