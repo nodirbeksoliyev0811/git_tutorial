@@ -47,7 +47,7 @@ class _NotFoundState extends State<NotFound> {
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                       borderRadius: BorderRadius.circular(30.r),
-                      border: Border.all(width: 0.2, color: Colors.grey),
+                      border: Border.all(width: 1, color: AppColors.C_777777.withOpacity(0.8)),
                     ),
                     child: Padding(
                       padding: EdgeInsets.all(13.sp),
@@ -60,7 +60,7 @@ class _NotFoundState extends State<NotFound> {
                   "Search Groceries",
                   style: TextStyle(
                     fontSize: 12.sp,
-                    fontFamily: "Montserrat",
+                    fontFamily: "Montserrat-Bold.ttf",
                     fontWeight: FontWeight.w400,
                     color: AppColors.C_4B4B4B,
                   ),
@@ -164,7 +164,7 @@ class _NotFoundState extends State<NotFound> {
               "Item not Found",
               style: TextStyle(
                 fontSize: 18.sp,
-                fontFamily: "Montserrat",
+                fontFamily: "Montserrat-Bold.ttf",
                 fontWeight: FontWeight.w800,
                 color: AppColors.C_4B4B4B,
               ),
@@ -173,7 +173,7 @@ class _NotFoundState extends State<NotFound> {
               "Try search with a different keyword",
               style: TextStyle(
                 fontSize: 12.sp,
-                fontFamily: "Montserrat",
+                fontFamily: "Montserrat-Bold.ttf",
                 fontWeight: FontWeight.w500,
                 color: AppColors.C_9C9C9C,
               ),
@@ -185,7 +185,7 @@ class _NotFoundState extends State<NotFound> {
                   "Popular",
                   style: TextStyle(
                     fontSize: 18.sp,
-                    fontFamily: "Montserrat",
+                    fontFamily: "Montserrat-Bold.ttf",
                     fontWeight: FontWeight.w800,
                     color: AppColors.C_4B4B4B,
                   ),

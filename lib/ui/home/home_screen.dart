@@ -2,6 +2,7 @@ import 'package:default_project/ui/home/widgets/new_screen_button.dart';
 import 'package:default_project/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../mr_nodir/item_not_found.dart';
 import '../search_expanded/search_expanded.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,28 +23,28 @@ class HomeScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(height: 30.h,),
-          NewScreenButton(title: "Screen1", onTap: (){
+          NewScreenButton(title: "dilshodbek0720", onTap: (){
             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
               return const SearchExpandedScreen();
             }));
           }, color: AppColors.C_194B38),
-          NewScreenButton(title: "Screen2", onTap: (){
+          NewScreenButton(title: "mr_nodir", onTap: (){
               Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
-                      return NotFound(),
+                      return const NotFound();
                     },
                   ),
                 );
           }, color: AppColors.C_194B38),
-          NewScreenButton(title: "Screen2", onTap: (){
+          NewScreenButton(title: "jamshid", onTap: (){
 
           }, color: AppColors.C_194B38),
-          NewScreenButton(title: "Screen2", onTap: (){
+          NewScreenButton(title: "muhammad", onTap: (){
 
           }, color: AppColors.C_194B38),
-          NewScreenButton(title: "Screen2", onTap: (){
+          NewScreenButton(title: "akromjon", onTap: (){
 
           }, color: AppColors.C_194B38),
           SizedBox(height: 40.h,)
