@@ -8,8 +8,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 class FilterScreen extends StatefulWidget {
   const FilterScreen({super.key});
 
-
-
   @override
   State<FilterScreen> createState() => _FilterScreenState();
 }
