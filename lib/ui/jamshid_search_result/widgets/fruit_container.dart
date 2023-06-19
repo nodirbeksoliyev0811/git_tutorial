@@ -52,7 +52,7 @@ class _FruitContainerState extends State<FruitContainer> {
                   style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 15.sp,
-                      fontFamily: "Raleway",
+                      fontFamily: "Raleway-Bold.ttf",
                       color: AppColors.C_194B38),
                 ),
                 SizedBox(
@@ -64,7 +64,7 @@ class _FruitContainerState extends State<FruitContainer> {
                         style: TextStyle(
                             fontSize: 24.sp,
                             fontWeight: FontWeight.w600,
-                            fontFamily: "Montserrat",
+                            fontFamily: "Montserrat-Bold.ttf",
                             color: AppColors.C_4CBB5E),
                         children: <TextSpan>[
                           TextSpan(
@@ -72,10 +72,10 @@ class _FruitContainerState extends State<FruitContainer> {
                             style: TextStyle(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 20.sp,
-                                fontFamily: "Montserrat",
+                                fontFamily: "Montserrat-Bold.ttf",
                                 color: AppColors.C_4CBB5E),
                           ),
-                          TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 14.sp,fontWeight: FontWeight.w600,fontFamily:"Raleway",color: AppColors.C_9C9C9C))
+                          TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 14.sp,fontWeight: FontWeight.w600,fontFamily:"Raleway-Bold.ttf",color: AppColors.C_9C9C9C))
                         ]
                     )
                 ),

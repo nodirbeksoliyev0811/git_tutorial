@@ -30,30 +30,45 @@ class _GridViewScreenState extends State<GridViewScreen> {
           padding: EdgeInsets.symmetric(horizontal: 30.w),
           child: Column(
             children: [
-              ListTile(
-                contentPadding: EdgeInsets.zero,
-                leading: Container(
-                  height: 40.h,
-                  width: 61.w,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100.r),
-                      border: Border.all(color: AppColors.C_777777.withOpacity(0.2)
-                      )),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 11.h),
-                    child: SvgPicture.asset(AppImages.arrowBack),
+              SizedBox(height: 30.h,),
+              Row(
+                children: [
+                  TextButton(
+                    style: TextButton.styleFrom(
+                        padding: EdgeInsets.only(left: 1.w, right: 1.w)),
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      height: 40.h,
+                      width: 60.w,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.circular(30.r),
+                        border: Border.all(width: 1, color: AppColors.C_777777.withOpacity(0.8)),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(13.sp),
+                        child: SvgPicture.asset(AppImages.arrowBack),
+                      ),
+                    ),
                   ),
-                ),
-                title: Center(
-                    child: Text(
-                      "Search Groceries",
-                      style: TextStyle(
-                          fontSize: 12.sp,
-                          fontWeight: FontWeight.w400,
-                          fontFamily: "Montserrat",
-                          color: AppColors.C_4B4B4B),
-                    )),
-                trailing: SvgPicture.asset(AppImages.basket),
+                  const Spacer(),
+                  Text(
+                    "Search Groceries",
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                      fontFamily: "Montserrat-Bold.ttf",
+                      fontWeight: FontWeight.w400,
+                      color: AppColors.C_4B4B4B,
+                    ),
+                  ),
+                  const Spacer(),
+                  IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(AppImages.basket),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 33.h,
@@ -83,7 +98,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
                           hintStyle: TextStyle(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Raleway",
+                            fontFamily: "Raleway-Bold.ttf",
                             color: Colors.black,
                           ),
                           fillColor: Colors.black,
@@ -129,7 +144,7 @@ class _GridViewScreenState extends State<GridViewScreen> {
                   style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
-                      fontFamily: "Raleway",
+                      fontFamily: "Raleway-Bold.ttf",
                       color: AppColors.C_194B38),
                 ),
                 trailing: Ink(child: InkWell(

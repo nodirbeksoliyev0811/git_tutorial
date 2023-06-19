@@ -50,7 +50,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                   style: TextStyle(
                       fontSize: 12.sp,
                       fontWeight: FontWeight.w400,
-                      fontFamily: "Montserrat",
+                      fontFamily: "Montserrat-Bold.ttf",
                       color: AppColors.C_4B4B4B),
                 )),
                 trailing: SvgPicture.asset(AppImages.basket),
@@ -83,7 +83,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                           hintStyle: TextStyle(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.w400,
-                            fontFamily: "Raleway",
+                            fontFamily: "Raleway-Bold.ttf",
                             color: Colors.black,
                           ),
                           fillColor: Colors.black,
@@ -131,7 +131,7 @@ class _SearchResultScreenState extends State<SearchResultScreen> {
                   style: TextStyle(
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
-                      fontFamily: "Raleway",
+                      fontFamily: "Raleway-Bold.ttf",
                       color: AppColors.C_194B38),
                 ),
                 trailing: Ink(child: InkWell(

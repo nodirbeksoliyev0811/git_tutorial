@@ -85,7 +85,7 @@ class _FruitGridViewState extends State<FruitGridView> {
           const Spacer(),
           Padding(
             padding: EdgeInsets.only(left: 17.w,),
-            child: Text(widget.text,style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14.sp,fontFamily: "Raleway",color: AppColors.C_194B38),),
+            child: Text(widget.text,style: TextStyle(fontWeight: FontWeight.w700,fontSize: 14.sp,fontFamily: "Raleway-Bold.ttf",color: AppColors.C_194B38),),
           ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -101,7 +101,7 @@ class _FruitGridViewState extends State<FruitGridView> {
                             style: TextStyle(
                                 fontSize: 14.sp,
                                 fontWeight: FontWeight.w600,
-                                fontFamily: "Montserrat",
+                                fontFamily: "Montserrat-Bold.ttf",
                                 color: AppColors.C_4CBB5E),
                             children: <TextSpan>[
                               TextSpan(
@@ -109,10 +109,10 @@ class _FruitGridViewState extends State<FruitGridView> {
                                 style: TextStyle(
                                     fontWeight: FontWeight.w600,
                                     fontSize: 12.sp,
-                                    fontFamily: "Montserrat",
+                                    fontFamily: "Montserrat-Bold.ttf",
                                     color: AppColors.C_4CBB5E),
                               ),
-                              TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 10.sp,fontWeight: FontWeight.w500,fontFamily:"Raleway",color: AppColors.C_9C9C9C))
+                              TextSpan(text: widget.richSubtitle,style: TextStyle(fontSize: 10.sp,fontWeight: FontWeight.w500,fontFamily:"Raleway-Bold.ttf",color: AppColors.C_9C9C9C))
                             ]
                         )
                     ),
