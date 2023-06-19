@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
           home: child,
         );
       },
-      child: GridViewScreen(),
+      child: const GridViewScreen(),
     );
   }
 }
