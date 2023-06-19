@@ -12,17 +12,20 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      designSize: const Size(375, 812),
       minTextAdapt: true,
       splitScreenMode: true,
-      designSize: const Size(375, 812),
-      builder: (context, child) {
+      builder: (context , child) {
         return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-                colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-                useMaterial3: true),
-            home: const NotFound());
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+              useMaterial3: true
+          ),
+          home: child,
+        );
       },
+      child: const HomeScreen(),
     );
   }
 }
